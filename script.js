@@ -4,6 +4,14 @@ let values = ['Ace', 'King', 'Queen', 'Jack',
               'Five', 'Four', 'Three', 'Two'];
 let deck = []
 
+for (let suitIdx=0; suitIdx < suits.length; suitIdx++) {
+  for (let valueIdx = 0; valueIdx < values.length; valueIdx++) {
+    deck.push(values[valueIdx] + ' of ' + suits[suitIdx]);
+  }
+}
+for (let i=0; i <deck.length; i++) {
+  console.log(deck[i]);
+}
 let playerCard = [deck[0], deck[2]];
 
 console.log('Welcome to BlackJack!');
