@@ -1,3 +1,5 @@
+let suits = ['Hearts', 'Clubs', 'Diamonds', 'Spades'];
+
 let deck = [
   "Ace of spades",
   "Two of spades",
