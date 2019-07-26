@@ -10,10 +10,18 @@ function createDeck() {
   let deck = [];
   for (let suitIdx=0; suitIdx < suits.length; suitIdx++) {
     for (let valueIdx = 0; valueIdx < values.length; valueIdx++) {
-      deck.push(values[valueIdx] + ' of ' + suits[suitIdx]);
+      let card = {
+        suit: suits[suitIdx],
+        value: values[valueIdx]
+      }
+      deck.push(card);
     }
   }
   return deck
+}
+
+function getCardStrings(card) {
+  return card.value + ' of ' + card.suit
 }
 
 function getNextCard() {
@@ -22,14 +30,11 @@ function getNextCard() {
 
 let deck = createDeck();
 
-
-for (let i=0; i <deck.length; i++) {
-  console.log(deck[i]);
-}
 let playerCard = [getNextCard(), getNextCard()];
 
 console.log('Welcome to BlackJack!');
 
+
 console.log("You're dealt: ");
-console.log(" " + playerCard[0]);
-console.log(" " +playerCard[1]);
+console.log(" " + getCardStrings(playerCard[0]));
+console.log(" " + getCardStrings(playerCard[1]));
