@@ -1,10 +1,8 @@
 let suits = ['Hearts', 'Clubs', 'Diamonds', 'Spades'];
-
-let deck = [
-  "Ace of spades",
-  "Two of spades",
-  "Three of spades"
-];
+let values = ['Ace', 'King', 'Queen', 'Jack',
+              'Ten', 'Nine', 'Eight', 'Seven', 'Six',
+              'Five', 'Four', 'Three', 'Two'];
+let deck = []
 
 let playerCard = [deck[0], deck[2]];
 
